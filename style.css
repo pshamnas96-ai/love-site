@@ -1,0 +1,155 @@
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  text-align:center;
+  color:white;
+}
+
+.section{
+  display:none;
+  min-height:100vh;
+  padding:40px;
+}
+
+.section.active{
+  display:block;
+}
+
+button{
+  padding:12px 26px;
+  border:none;
+  border-radius:25px;
+  background:#ff4081;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px rgba(255,64,129,0.6);
+}
+
+.note{
+  font-size:14px;
+  opacity:0.9;
+  margin-bottom:20px;
+}
+
+.story-item{
+  background:white;
+  color:#ff4081;
+  margin:15px auto;
+  padding:15px;
+  width:80%;
+  border-radius:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.story-item:hover{
+  transform:scale(1.03);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.locked{
+  opacity:0.5;
+  cursor:not-allowed;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.modal-content{
+  background:white;
+  color:#ff4081;
+  padding:25px;
+  border-radius:20px;
+  width:80%;
+  animation:fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:scale(0.8);}
+  to{opacity:1; transform:scale(1);}
+}
+
+/* 💖 MEMORY CARD PREMIUM DESIGN */
+
+.memory{
+  margin:40px auto;
+  width:240px;
+  text-align:center;
+  background:rgba(255,255,255,0.1);
+  padding:15px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.3);
+  transition:0.4s;
+}
+
+.memory:hover{
+  transform:translateY(-8px) scale(1.05);
+  box-shadow:0 20px 45px rgba(255,64,129,0.6);
+}
+
+.memory img{
+  width:100%;
+  border-radius:15px;
+  filter:blur(20px);
+  transition:0.8s ease;
+}
+
+/* Cute Glow Border */
+.memory img{
+  border:3px solid rgba(255,255,255,0.4);
+  box-shadow:0 0 15px rgba(255,105,180,0.5);
+}
+
+.memory span{
+  display:block;
+  margin-top:12px;
+  font-weight:bold;
+  font-size:16px;
+  color:white;
+  letter-spacing:1px;
+}
+
+/* Smooth Unlock Animation */
+.memory.unlocked img{
+  filter:blur(0);
+  transform:scale(1.05);
+  box-shadow:0 0 25px rgba(255,20,147,0.8);
+  transition:0.8s ease;
+}
+
+/* Valentine Buttons */
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+}
+
+#popup{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:white;
+  padding:20px 30px;
+  border-radius:25px;
+  color:#ff4081;
+  display:none;
+  opacity:0;
+  transition:opacity 0.5s;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
